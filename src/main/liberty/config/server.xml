@@ -1,6 +1,6 @@
 <server description="${project.name}">
     <featureManager>
-        <feature>microProfile-3.2</feature>
+        <feature>microProfile-3.3</feature>
         <feature>beanValidation-2.0</feature>
     </featureManager>
 

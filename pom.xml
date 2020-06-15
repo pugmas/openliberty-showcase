@@ -20,11 +20,11 @@
 
         <timestamp>${maven.build.timestamp}</timestamp>
 
-        <version.open-liberty>20.0.0.5</version.open-liberty>
+        <version.open-liberty>20.0.0.6</version.open-liberty>
 
         <version.jakarta-ee>8.0.0</version.jakarta-ee>
 
-        <version.microprofile>3.2</version.microprofile>
+        <version.microprofile>3.3</version.microprofile>
         <version.microprofile-ext>1.0.5</version.microprofile-ext>
 
         <version.apache_commons-lang>3.6</version.apache_commons-lang>
