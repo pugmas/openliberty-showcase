@@ -3,7 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <name>Open Liberty Showcase</name>
     <groupId>de.openknowledge.projects.showcase</groupId>
     <artifactId>openliberty-showcase</artifactId>
     <version>0</version>
@@ -117,9 +116,6 @@
                 <configuration>
                     <repository>${project.build.finalName}</repository>
                     <tag>${project.version}</tag>
-                    <buildArgs>
-                        <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
-                    </buildArgs>
                     <skipDockerInfo>true</skipDockerInfo>
                 </configuration>
                 <executions>

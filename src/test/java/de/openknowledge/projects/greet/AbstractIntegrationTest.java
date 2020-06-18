@@ -17,6 +17,7 @@ package de.openknowledge.projects.greet;
 
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.containers.Network;
+import org.testcontainers.containers.wait.strategy.Wait;
 
 /**
  * Provides testcontainers for integration tests.
@@ -27,7 +28,8 @@ public abstract class AbstractIntegrationTest {
 
   protected static final GenericContainer CONTAINER = new GenericContainer("openliberty-showcase:0")
       .withExposedPorts(9080)
-      .withNetwork(NETWORK);
+      .withNetwork(NETWORK)
+      .waitingFor(Wait.forHealthcheck());
 
   static {
     CONTAINER.start();
