@@ -53,7 +53,7 @@ public class GreetResource {
   @GET
   @Path("{name}")
   @Operation(description = "Greet someone")
-  @APIResponse(responseCode = "200", description = "Ok")
+  @APIResponse(responseCode = "200", description = "Ok", content = @Content(schema = @Schema(implementation = GreetDTO.class)))
   public Response greet(@Parameter(description = "name") @PathParam("name") final String name) {
     LOG.info("Greet {}", name);
 
@@ -77,7 +77,7 @@ public class GreetResource {
   @GET
   @Operation(description = "Get greeting")
   @Produces(MediaType.APPLICATION_JSON)
-  @APIResponse(responseCode = "200", description = "Ok")
+  @APIResponse(responseCode = "200", description = "Ok", content = @Content(schema = @Schema(implementation = GreetDTO.class)))
   public Response getGreeting() {
     LOG.info("Get greeting");
 

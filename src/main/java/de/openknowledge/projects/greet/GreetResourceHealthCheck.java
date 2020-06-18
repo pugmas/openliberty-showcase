@@ -68,7 +68,7 @@ public class GreetResourceHealthCheck implements HealthCheck {
   }
 
   private URI getResourceUri() {
-    return UriBuilder.fromPath(contextRoot)
+    return UriBuilder.fromPath("/")
         .path(JaxRsActivator.class.getAnnotation(ApplicationPath.class).value())
         .path(GreetResource.class.getAnnotation(Path.class).value())
         .scheme("http")

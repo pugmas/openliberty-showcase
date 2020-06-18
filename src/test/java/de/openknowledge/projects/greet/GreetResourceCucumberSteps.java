@@ -41,7 +41,6 @@ public class GreetResourceCucumberSteps {
   public void beforeScenario() {
     requestSpecification = new RequestSpecBuilder()
         .setPort(GreetResourceCucumberTestContainerBaseClass.getContainer().getFirstMappedPort())
-        .setBasePath("openliberty-showcase")
         .build();
   }
 
