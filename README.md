@@ -11,7 +11,7 @@ jar and Docker image and can be run via `docker`:
 
 ```shell script
 $ mvn clean package
-$ docker run --rm -p 9080:9080 openliberty-showcase:0
+$ docker run --rm -p 9080:9080 openliberty-showcase
 ```
 
 Wait for a message log similar to this:
