@@ -1,5 +1,7 @@
 # Open Liberty Showcase
 
+[![CircleCI](https://circleci.com/gh/stephan-mueller/openliberty-showcase.svg?style=shield)](https://app.circleci.com/pipelines/github/stephan-mueller/openliberty-showcase)
+
 This is a showcase for the microservice framework [Open Liberty](https://openliberty.io). It contains a hello world application, which demonstrates several features of openliberty and Eclipse Microprofile
 
 Software requirements to run the samples are `maven`, `openjdk-1.8` (or any other 1.8 JDK) and `docker`. When running the Maven lifecycle it will create the war package and use the `liberty-maven-plugin` to create a runnable jar (fat jar) which contains the application and the Open Liberty application server. The fat jar will be copied into a Docker image using Spotify's `dockerfile-maven-plugin` during the package phase. 
