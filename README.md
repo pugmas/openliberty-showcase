@@ -3,6 +3,9 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/stephan-mueller/openliberty-showcase)](https://github.com/stephan-mueller/openliberty-showcase/commits) 
 [![GitHub](https://img.shields.io/github/license/stephan-mueller/openliberty-showcase)](https://github.com/stephan-mueller/openliberty-showcase/blob/master/LICENSE)
 [![CircleCI](https://circleci.com/gh/stephan-mueller/openliberty-showcase.svg?style=shield)](https://app.circleci.com/pipelines/github/stephan-mueller/openliberty-showcase)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=stephan-mueller_openliberty-showcase&metric=alert_status)](https://sonarcloud.io/dashboard?id=stephan-mueller_openliberty-showcase)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=stephan-mueller_openliberty-showcase&metric=coverage)](https://sonarcloud.io/dashboard?id=stephan-mueller_openliberty-showcase)
+
  
 This is a showcase for the microservice framework [Open Liberty](https://openliberty.io). It contains a hello world application, which demonstrates several features of openliberty and Eclipse Microprofile
 
