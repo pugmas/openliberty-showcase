@@ -361,5 +361,14 @@
             <version>${version.glassfish-javax-el}</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Jacoco -->
+        <dependency>
+            <groupId>org.jacoco</groupId>
+            <artifactId>org.jacoco.agent</artifactId>
+            <version>${version.jacoco}</version>
+            <classifier>runtime</classifier>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 </project>
