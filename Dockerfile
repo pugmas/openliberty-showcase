@@ -1,10 +1,9 @@
-FROM openliberty/open-liberty:20.0.0.6-full-java8-openj9-ubi
+FROM openjdk:8-jre-alpine
 
-ARG WAR_FILE
+ARG JAR_FILE=openliberty-showcase.jar
+COPY target/${JAR_FILE} /opt/application.jar
 
-COPY --chown=1001:0 src/main/liberty/config /config/
-COPY --chown=1001:0 target/${WAR_FILE} /config/apps
+ENV JAVA_OPTS="-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv4Addresses=true"
 
-HEALTHCHECK --start-period=10s --timeout=60s --retries=10 --interval=5s CMD curl -f http://localhost:9080/health/ready || exit 1
-
-RUN configure.sh
+EXPOSE 9080
+ENTRYPOINT exec java $JAVA_OPTS -jar /opt/application.jar

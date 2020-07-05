@@ -102,7 +102,7 @@
                 <configuration>
                     <repository>${project.build.finalName}</repository>
                     <buildArgs>
-                        <WAR_FILE>${project.build.finalName}.war</WAR_FILE>
+                        <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>
                     <skipDockerInfo>true</skipDockerInfo>
                 </configuration>
@@ -188,7 +188,7 @@
                                     <directory>${project.build.directory}</directory>
                                     <includes>
                                         <include>jacoco-ut.exec</include>
-                                        <include>jacoco-it/jacoco-it.exec</include>
+                                        <include>jacoco-it.exec</include>
                                     </includes>
                                 </fileSet>
                             </fileSets>

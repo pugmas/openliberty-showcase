@@ -32,7 +32,7 @@ public abstract class AbstractIntegrationTest {
       .withExposedPorts(9080)
       .withNetwork(NETWORK)
       .withNetworkAliases(NETWORK_ALIAS_APPLICATION)
-      .waitingFor(Wait.forHealthcheck());
+      .waitingFor(Wait.forLogMessage(".*server is ready to run.*", 1));
 
   static {
     APPLICATION.start();

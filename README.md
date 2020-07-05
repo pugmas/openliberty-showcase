@@ -39,6 +39,6 @@ $ docker ps -a | grep openliberty-showcase
 
 If there are containers remaining although the application has been stopped you can remove them:
 
-````shell script
+```shell script
 $ docker rm <ids of the containers>
-````
+```
