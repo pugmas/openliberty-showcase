@@ -19,7 +19,7 @@
 
         <timestamp>${maven.build.timestamp}</timestamp>
 
-        <version.open-liberty>20.0.0.6</version.open-liberty>
+        <version.open-liberty>20.0.0.7</version.open-liberty>
 
         <version.jakarta-ee>8.0.0</version.jakarta-ee>
 
