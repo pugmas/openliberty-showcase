@@ -51,7 +51,7 @@ public class GreetResource {
 
   @GET
   @Path("{name}")
-  @Operation(description = "Greet someone")
+  @Operation(operationId = "greetSomeone", description = "Greet someone")
   @APIResponse(responseCode = "200", description = "Ok", content = @Content(schema = @Schema(implementation = GreetDTO.class)))
   public Response greet(@Parameter(description = "name") @PathParam("name") final String name) {
     LOG.info("Greet {}", name);
@@ -66,17 +66,17 @@ public class GreetResource {
   }
 
   @GET
-  @Operation(description = "Greet the world")
-  @APIResponse(responseCode = "200", description = "Ok")
+  @Operation(operationId = "greetTheWorld", description = "Greet the world")
+  @APIResponse(responseCode = "200", description = "Ok", content = @Content(schema = @Schema(implementation = GreetDTO.class)))
   public Response greetTheWorld() {
     return greet("World");
   }
 
   @Path("greeting")
   @GET
-  @Operation(description = "Get greeting")
+  @Operation(operationId = "getGreeting", description = "Get greeting")
   @Produces(MediaType.APPLICATION_JSON)
-  @APIResponse(responseCode = "200", description = "Ok", content = @Content(schema = @Schema(implementation = GreetDTO.class)))
+  @APIResponse(responseCode = "200", description = "Ok", content = @Content(schema = @Schema(implementation = GreetingDTO.class)))
   public Response getGreeting() {
     LOG.info("Get greeting");
 
@@ -91,7 +91,7 @@ public class GreetResource {
 
   @Path("greeting")
   @PUT
-  @Operation(description = "Update greeting")
+  @Operation(operationId = "updateGreeting", description = "Update greeting")
   @Consumes(MediaType.APPLICATION_JSON)
   @Produces(MediaType.APPLICATION_JSON)
   @RequestBody(name = "greeting", required = true, content = @Content(mediaType = MediaType.APPLICATION_JSON,
