@@ -15,6 +15,7 @@ which contains the application and the Open Liberty application server. The fat 
 `dockerfile-maven-plugin` during the package phase. 
 
 **Notable Features:**
+* Dockerfiles for runnable JAR & Server
 * Integration of MP Health, MP Metrics and MP OpenAPI
 * Testcontainer-Tests with Rest-Assured, Cucumber and Postman/newman
 * Code-Coverage for Testcontainer-Tests
