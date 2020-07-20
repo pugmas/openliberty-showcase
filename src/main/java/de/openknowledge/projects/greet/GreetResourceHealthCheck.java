@@ -42,10 +42,6 @@ public class GreetResourceHealthCheck implements HealthCheck {
   @ConfigProperty(name = "default.http.port")
   private Integer port;
 
-  @Inject
-  @ConfigProperty(name = "app.context.root")
-  private String contextRoot;
-
   @Override
   public HealthCheckResponse call() {
     HealthCheckResponseBuilder builder = HealthCheckResponse.named(GreetResource.class.getSimpleName());

@@ -46,7 +46,6 @@
 
         <liberty.var.default.http.port>9080</liberty.var.default.http.port>
         <liberty.var.default.https.port>9443</liberty.var.default.https.port>
-        <liberty.var.app.context.root>${project.artifactId}</liberty.var.app.context.root>
 
         <sonar.projectKey>stephan-mueller_openliberty-showcase</sonar.projectKey>
         <sonar.organization>stephan-mueller</sonar.organization>
