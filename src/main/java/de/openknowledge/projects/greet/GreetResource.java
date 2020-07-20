@@ -15,6 +15,8 @@
  */
 package de.openknowledge.projects.greet;
 
+import org.eclipse.microprofile.metrics.MetricUnits;
+import org.eclipse.microprofile.metrics.annotation.Timed;
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.enums.SchemaType;
 import org.eclipse.microprofile.openapi.annotations.media.Content;
@@ -42,6 +44,7 @@ import javax.ws.rs.core.Response;
 @Path("greet")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
+@Timed(name = "Greet", displayName = "Greet", unit = MetricUnits.MILLISECONDS, description = "Metrics of the GreetResource", absolute = true)
 public class GreetResource {
 
   private static final Logger LOG = LoggerFactory.getLogger(GreetResource.class);

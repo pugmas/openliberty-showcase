@@ -16,7 +16,7 @@ which contains the application and the Open Liberty application server. The fat 
 
 **Notable Features:**
 * Dockerfiles for runnable JAR & Server
-* Integration of MP Health and MP OpenAPI
+* Integration of MP Health, MP Metrics and MP OpenAPI
 * Testcontainer-Tests with Rest-Assured, Cucumber and Postman/newman
 * [CircleCI](https://circleci.com) Integration
 * [Sonarcloud](https://sonarcloud.io) Integration
@@ -85,9 +85,9 @@ curl -X GET http://localhost:9080/api/greet/Max
 {"message":"Hola Max!"}
 ```
 
-### Health and OpenAPI
+### Health, Metrics and OpenAPI
 
-The application server provides built-in support for health and openapi endpoints.
+The application server provides built-in support for health, metrics and openapi endpoints.
 
 Health liveness and readiness
 ```shell script
@@ -96,6 +96,13 @@ curl -s -X GET http://localhost:9080/health
 curl -s -X GET http://localhost:9080/health/live
 
 curl -s -X GET http://localhost:9080/health/ready
+```
+
+Metrics in Prometheus / JSON Format
+```shell script
+curl -s -X GET http://localhost:9080/metrics
+
+curl -H 'Accept: application/json' -X GET http://localhost:9080/metrics
 ```
 
 OpenAPI in YAML / JSON Format
